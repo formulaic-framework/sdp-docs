@@ -5,7 +5,7 @@ WORKDIR /generator
 RUN npm i && npm pack
 RUN ls /generator/booz-allen-site-generator-1.0.0.tgz
 
-FROM antora/antora:2.3.0
+FROM antora/antora:3.0.3
 ENV NODE_OPTIONS="--max-old-space-size=8192"
 COPY --from=generator /generator/booz-allen-site-generator-1.0.0.tgz . 
 # determined from antora-lunr dependencies
