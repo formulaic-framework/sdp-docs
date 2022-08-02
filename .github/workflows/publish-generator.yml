@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: site-generator
+  IMAGE_NAME: ${{ github.repository }}/site-generator
 
 jobs:
   build-and-push:
